@@ -10,7 +10,6 @@ scriptencoding utf-8
 set number
 set title
 set scrolloff=8
-set showmatch
 set nostartofline
 set tabstop=4
 set shiftwidth=4
@@ -19,6 +18,7 @@ set smartindent
 set autoindent
 set visualbell
 set timeoutlen=3500
+set iskeyword-=_
 
 set directory=~/.config/nvim/swp
 set backup
@@ -44,9 +44,12 @@ autocmd BufWritePre * :%s/\s\+$//ge
 syntax on
 colorscheme desert
 " highlight corrnt line
+set showmatch
 set cursorline
+set cursorcolumn
 " under line(color terminal)
 highlight CursorLine cterm=none ctermfg=none ctermbg=237
+highlight CursorColumn cterm=none ctermfg=none ctermbg=234
 "highlight CursorLine cterm=reverse ctermfg=none ctermbg=237
 " under line(gui)
 highlight CursorLine gui=underline guifg=NONE guibg=NONE
