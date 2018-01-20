@@ -7,7 +7,7 @@ endif
 
 let s:dein_dir = expand('~/.config/nvim/dein')
 
-set runtimepath+=~/.config/nvim/dein/repos/github/Shougo/dein.vim
+set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state(s:dein_dir)
 	call dein#begin(s:dein_dir)
