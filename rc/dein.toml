@@ -13,7 +13,17 @@ let g:deoplete#enable_at_startup = 1
 '''
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+hook_add = '''
+let g:vimshell_vimshrc_path = expand('$HOME/.config/nvim/.vimshrc')
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'vim-scripts/sudo.vim'

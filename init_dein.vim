@@ -9,7 +9,7 @@ let s:dein_dir = expand('~/.config/nvim/dein')
 
 set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state(s:dein_dir)
+"if dein#load_state(s:dein_dir)
 	call dein#begin(s:dein_dir)
 
 	let g:rc_dir = expand('~/.config/nvim/rc')
@@ -24,7 +24,7 @@ if dein#load_state(s:dein_dir)
 
 	call dein#end()
 	call dein#save_state()
-endif
+"endif
 
 if dein#check_install()
 	call dein#install()
