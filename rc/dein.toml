@@ -27,3 +27,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'vim-scripts/sudo.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
