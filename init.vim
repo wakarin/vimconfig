@@ -1,6 +1,12 @@
-source $HOME/.config/nvim/init_dein.vim
-source $HOME/.config/nvim/status_color.vim
-source $HOME/.config/nvim/keymap.vim
+if has('nvim')
+    source $HOME/.config/nvim/init_dein.vim
+    source $HOME/.config/nvim/status_color.vim
+    source $HOME/.config/nvim/keymap.vim
+else
+    source $HOME/.vim/status_color.vim
+    source $HOME/.vim/keymap.vim
+endif
+
 
 "----------------------------------------
 " system config
@@ -19,12 +25,19 @@ set autoindent
 set visualbell
 set timeoutlen=3500
 set iskeyword-=_
+set wildmode=longest:full,full
 
-set directory=~/.config/nvim/swp
-set backup
-set backupdir=~/.config/nvim/backup
-set viminfo+=n~/.config/nvim/.viminfo
-
+if has('nvim')
+    set directory=~/.config/nvim/swp
+    set backup
+    set backupdir=~/.config/nvim/backup
+    set viminfo+=n~/.config/nvim/.viminfo
+else
+    set directory=~/.vim/swp
+    set backup
+    set backupdir=~/.vim/backup
+    set viminfo+=n~/.vim/.viminfo
+endif
 "search
 set ignorecase
 set smartcase
