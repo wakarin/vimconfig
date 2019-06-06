@@ -27,6 +27,7 @@ set timeoutlen=3500
 set iskeyword-=_
 set wildmode=longest:full,full
 
+set autoread
 if has('nvim')
     set directory=~/.config/nvim/swp
     set backup
